@@ -25,6 +25,11 @@ def with_venv(*args):
 
 def after_install(options, home_dir):
     copy(join(BOOTSTRAP, 'postactivate'), VIRTUALENV_BIN)
-    with_venv('pip', 'install', '-r', join(ROOT, 'bootstrap', 'requirements.txt'))
+    with_venv('pip', 'install', '-r', join(BOOTSTRAP, 'requirements.txt'))
+
+    # Delete git folders
+    with_venv('rm', '-rf', join(ROOT, '.git'))
+    with_venv('rm', '-rf', join(ROOT, '.gitignore'))
+
     print "Done! Activate your virtualenv: source bin/activate"
 
