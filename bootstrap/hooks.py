@@ -25,6 +25,6 @@ def with_venv(*args):
 
 def after_install(options, home_dir):
     copy(join(BOOTSTRAP, 'postactivate'), VIRTUALENV_BIN)
-    with_venv('pip', 'install', '-r', join(ROOT, 'requirements.txt'))
+    with_venv('pip', 'install', '-r', join(ROOT, 'bootstrap', 'requirements.txt'))
     print "Done! Activate your virtualenv: source bin/activate"
 
