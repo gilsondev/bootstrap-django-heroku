@@ -2,7 +2,7 @@
 
 The best way to have people contributing to your project is to make easy for them to just **checkout** and **run**.
 
-Virtualenv Bootstrap helps your contributor to just clone your repository and setup a django development environment with just one command:
+Virtualenv Bootstrap helps your contributor to just setup a django development environment for Heroku, with just one command:
 
 1.  Clone the repository:
 
@@ -21,24 +21,24 @@ Virtualenv Bootstrap detects your current python interpreter and:
 
 1. Creates a [Virtualenv][] for your project;
 2. Installs [Distribute][];
-3. Setups a simple [postactivate][] file for those who use [Virtualenvwrapper][];
-4. Searches for your [requirements.txt][] at your repository root and install all your dependencies with [Pip][];
+3. Installs your [requirements.txt][] at your bootstrap root and install all your dependencies with [Pip][];
+4. Setups a simple [postactivate][] file for those who use [Virtualenvwrapper][];
 
+## Dependencies
 
-## How to add it to your project?
-
-Just copy the `bootstrap` directory to you repository directory.
-
-You can easely do this with the following script:
-
-    curl -L https://github.com/henriquebastos/virtualenv-bootstrap/tarball/master | tar -xzv --strip-components 1 */bootstrap
+ - Django==1.5.1
+ - South==0.7.6
+ - Unipath==1.0
+ - distribute==0.6.34
+ - dj-database-url==0.2.1
+ - gunicorn==0.17.4
 
 
 ## How to extend it?
 
 You might want to automate some other tasks to make the setup of complex projects really easy, like:
 
-- runing tests
+- generate project structure using django project templates
 - detecting presence of services your project needs
 - etc.
 
