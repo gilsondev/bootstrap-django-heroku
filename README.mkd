@@ -1,8 +1,8 @@
-# Virtualenv Bootstrap
+# Virtualenv Bootstrap Django
 
 The best way to have people contributing to your project is to make easy for them to just **checkout** and **run**.
 
-Virtualenv Bootstrap helps your contributor to just clone your repository and setup a development environmet with just one command:
+Virtualenv Bootstrap helps your contributor to just clone your repository and setup a django development environment with just one command:
 
 1.  Clone the repository:
 
@@ -14,7 +14,6 @@ Virtualenv Bootstrap helps your contributor to just clone your repository and se
         python bootstrap
 
 It works based on built-in [Virtualenv][] capabilities, but it's completely isolated. Perfect even for newcommers who don't still have or understand Python Packaging tools.
-
 
 ## How it works?
 
